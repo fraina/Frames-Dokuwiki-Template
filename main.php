@@ -205,12 +205,14 @@ $showTOC = ($ACT == "show");
 							<?php
 				                tpl_action('edit', 1, 'li');
 				            ?>
-							<li id="show_list">
-								<a title="目錄">目錄</a>
-								<div class="list">
-									<?php tpl_toc()?>
-								</div>
-							</li>
+                            <?php if ($tocHtml = trim(tpl_toc(true))): ?>
+                                <li id="show_list">
+                                    <a title="目錄">目錄</a>
+                                    <div class="list">
+                                        <?php echo $tocHtml; ?>
+                                    </div>
+                                </li>                            
+                            <?php endif; ?>
 						</ul>
 					</aside>
 				</div>
