@@ -1,10 +1,8 @@
 <?php
 /**
- * DokuWiki Starter Template
+ * Frames - DokuWiki Template
  *
- * @link     http://dokuwiki.org/template:starter
- * @author   Anika Henke <anika@selfthinker.org>
- * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
+ * @author   Fraina Huang <Fraina@distract.org> | Miles Chou <Miles@distract.org>
  */
 
 if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
@@ -54,8 +52,10 @@ $showTOC = ($ACT == "show");
 		<div class="page">
 			
 			<div class="Mlist">
-				<?php tpl_toc()?>
-				<a href="#" title="回到頂端" class="top">回到頂端</a>
+				<div class="box">
+					<?php tpl_toc()?>
+					<a href="#" title="回到頂端" class="top">回到頂端</a>
+				</div>
 			</div>
 			
 			<header>

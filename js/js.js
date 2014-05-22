@@ -18,13 +18,13 @@ jQuery(document).ready(function() {
     /*
      * code 套用 MyCustomScrollbar
      */
-    /*
+    
     jQuery('pre').mCustomScrollbar({
         horizontalScroll:true,
         theme: 'dark-thick',
         scrollInertia: 100
     });
-    */
+    
    
     /*
      * 隱藏列表中的「目錄表」字樣
