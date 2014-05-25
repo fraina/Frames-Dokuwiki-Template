@@ -24,7 +24,6 @@ jQuery(document).ready(function() {
         theme: 'dark-thick',
         scrollInertia: 100
     });
-    
    
     /*
      * 隱藏列表中的「目錄表」字樣
@@ -92,8 +91,6 @@ jQuery(document).ready(function() {
             jQuery(this).find('span').css('display','block');
         }
     });
-    
-    jQuery('.mCustomScrollBox').css('font-size','12px');
     
     /*
      * Searchbar setting
@@ -203,5 +200,13 @@ jQuery(document).ready(function() {
             jQuery(document).unbind("swiperight");
         }
     });
+    
+    $('.scroll-pane').jScrollPane();
+    $('.scroll-pane-arrows').jScrollPane(
+        {
+            showArrows: true,
+            horizontalGutter: 10
+        }
+    );
     
 });
