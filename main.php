@@ -19,19 +19,20 @@ $showTOC = ($ACT == "show");
 	    <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
 	    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     	<?php tpl_metaheaders() ?>
-	    
+
     	<link rel="stylesheet" media="screen" href="<?php echo DOKU_TPL.'css/screen.css'?>">
     	<link rel="stylesheet" media="screen" href="<?php echo DOKU_TPL.'css/jquery.mCustomScrollbar.css'?>">
-    	
+
     	<script src="<?php echo DOKU_TPL.'js/jquery.mobile.custom.js'?>"></script>
     	<script src="<?php echo DOKU_TPL.'js/jquery.nicescroll.min.js'?>"></script>
+    	<script src="<?php echo DOKU_TPL.'js/jquery.nicescroll.plus.js'?>"></script>
     	<script src="<?php echo DOKU_TPL.'js/jquery.mCustomScrollbar.concat.min.js'?>"></script>
 		<script src="<?php echo DOKU_TPL.'js/js.js'?>"></script>
-		
+
 	    <meta name="viewport" content="width=device-width,initial-scale=1" />
 	    <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
 	    <?php tpl_includeFile('meta.html') ?>
-	    
+
 	</head>
 
 	<body>
@@ -41,7 +42,7 @@ $showTOC = ($ACT == "show");
 		    tpl_content(false);
 		    $buffer = ob_get_clean();
 		?>
-		
+
 	    <?php /* with these Conditional Comments you can better address IE issues in CSS files,
          precede CSS rules by #IE7 for IE7 and #IE8 for IE8 (div closes at the bottom) */ ?>
 		<!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
@@ -49,15 +50,15 @@ $showTOC = ($ACT == "show");
 	    <?php /* the "dokuwiki__top" id is needed somewhere at the top, because that's where the "back to top" button/link links to */ ?>
 	    <?php /* tpl_classes() provides useful CSS classes; if you choose not to use it, the 'dokuwiki' class at least
          should always be in one of the surrounding elements (e.g. plugins and templates depend on it) */ ?>
-		<div class="page">
-			
+		<div class="page dokuwiki">
+
 			<div class="Mlist">
 				<div class="box">
 					<?php tpl_toc()?>
 					<a href="#" title="回到頂端" class="top">回到頂端</a>
 				</div>
 			</div>
-			
+
 			<header>
 				<div class="main">
 					<div class="logo">
@@ -75,12 +76,12 @@ $showTOC = ($ACT == "show");
 						<div class="forMobile">
 							<a href="#"><img src="<?php echo DOKU_TPL.'images/mobile_menu.png'?>" alt="Menu" /></a>
 						</div>
-						
+
 						<div class="searchbox mobileElse">
 							<div class="click_area">Open Searchbar</div>
 							<?php tpl_searchform() ?>
 						</div>
-						
+
 						<ul class="menu">
 							<li>
 								<a href="#" id="Options_PC" title="<?php echo $lang['site_tools'] ?>"><?php echo $lang['site_tools'] ?></a>
@@ -187,7 +188,7 @@ $showTOC = ($ACT == "show");
 					</li>
 				</ul>
 			</header>
-			
+
 			<nav style="position: relative;">
 				<div class="main">
 					<?php if($conf['breadcrumbs']){ ?>
@@ -198,7 +199,7 @@ $showTOC = ($ACT == "show");
 		                	<?php tpl_youarehere() ?>
 		                </div>
 		            <?php } ?>
-					
+
 					<aside class="mobileElse">
 						<ul>
 							<li><a href="#" title="回到頁面頂端">回到頁面頂端</a></li>
@@ -230,14 +231,14 @@ $showTOC = ($ACT == "show");
                     <?php tpl_flush() ?>
 				</div>
 			</div>
-			
+
 			<?php tpl_flush() ?>
 
 			<footer>
 				<div class="main">
 					<p><?php tpl_pageinfo() ?></p>
 					<?php tpl_license(''); // license text ?>
- 
+
 				    <div class="buttons">
 				        <?php
 				            tpl_license('button', true, false, false); // license button, no wrapper
@@ -256,11 +257,11 @@ $showTOC = ($ACT == "show");
 				    </div>
 				</div>
 			</footer>
-			
+
 		</div>
 		<div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
 		<div id="screen__mode" class="no"></div><?php /* helper to detect CSS media query in script.js */ ?>
     	<!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
-    	
+
 	</body>
 </html>

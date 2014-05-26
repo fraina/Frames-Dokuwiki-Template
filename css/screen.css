@@ -268,7 +268,7 @@ header .main .options .menu {
     border-right: 1px #588aa7 solid;
   }
   header .main .options .menu > li:hover {
-    background: url('../images/bg_nav.jpg?1400724082') repeat-x;
+    background: url('../images/bg_nav.jpg?1400805948') repeat-x;
   }
   header .main .options .menu > li:first-child {
     border-left: 1px #588aa7 solid;
@@ -341,7 +341,7 @@ header .main .options .menu {
     overflow: hidden;
     height: 26px;
     width: 26px;
-    z-index: 9999;
+    z-index: 9997;
     position: absolute;
     text-indent: -9999px;
   }
@@ -380,7 +380,7 @@ header .main .options .menu {
     height: 26px;
     margin-left: -13px;
     background: none;
-    background: url('../images/icon_searchbar.png?1400724044') center center no-repeat;
+    background: url('../images/icon_searchbar.png?1400805948') center center no-repeat;
   }
 }
 header .Mmenu {
@@ -468,7 +468,7 @@ header .Mmenu li.searchbar input.button {
   min-height: 26px;
   text-indent: -9999px;
   background: none;
-  background: url('../images/icon_searchbar.png?1400724044') center center no-repeat;
+  background: url('../images/icon_searchbar.png?1400805948') center center no-repeat;
 }
 header .Mmenu li a {
   display: block;
@@ -495,10 +495,10 @@ header .Mmenu li span {
 }
 
 nav {
-  z-index: 9999;
+  z-index: 9998;
   height: 30px;
   width: 100%;
-  background: #303030 url('../images/bg_breadcrumb.jpg?1400724088') left top repeat-x;
+  background: #303030 url('../images/bg_breadcrumb.jpg?1400805948') left top repeat-x;
 }
 nav .main {
   width: 82.97872%;
@@ -517,7 +517,7 @@ nav .breadcrumb .bcsep {
   width: 20px;
   display: block;
   text-indent: -9999px;
-  background: url('../images/icon_breadcrumb.png?1400724066') center center no-repeat;
+  background: url('../images/icon_breadcrumb.png?1400805948') center center no-repeat;
 }
 nav aside {
   width: 82.97872%;
@@ -541,15 +541,15 @@ nav aside li a {
   height: 30px;
 }
 nav aside li:first-child {
-  background: url('../images/icon_backtotop.png?1400724068') no-repeat;
+  background: url('../images/icon_backtotop.png?1400805948') no-repeat;
   background-position: center center;
 }
 nav aside li:nth-child(2) {
-  background: url('../images/icon_edit_page.png?1400724062') no-repeat;
+  background: url('../images/icon_edit_page.png?1400805948') no-repeat;
   background-position: center center;
 }
 nav aside li:nth-child(3) {
-  background: url('../images/icon_list_off.png?1400724056') no-repeat;
+  background: url('../images/icon_list_off.png?1400805948') no-repeat;
   background-position: center center;
 }
 nav aside #show_list {
@@ -568,7 +568,7 @@ nav aside #show_list .list {
   overflow: hidden;
   color: white;
   display: none;
-  background: #2f7096 url('../images/bg_list.jpg?1400724086') center top repeat-x;
+  background: #2f7096 url('../images/bg_list.jpg?1400805948') center top repeat-x;
   -moz-box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
@@ -656,13 +656,13 @@ nav aside #show_list .list ul ul li {
 }
 .container .content ul li, .container .content ol li {
   padding-left: 15px;
-  background: url('../images/icon_ul_style_type.png?1400724038') left 7px no-repeat;
+  background: url('../images/icon_ul_style_type.png?1400805948') left 7px no-repeat;
 }
 .container .content ol {
   list-style-type: decimal;
   margin-left: 32px;
 }
-.container .content ol li {
+.container .content ol > li {
   padding-left: 0;
   background: none;
 }
@@ -676,11 +676,11 @@ nav aside #show_list .list ul ul li {
 }
 .container .content a.urlextern {
   padding-left: 20px;
-  background: url('../images/icon_link_outside.png?1400724060') left center no-repeat;
+  background: url('../images/icon_link_outside.png?1400805948') left center no-repeat;
 }
 .container .content a.interwiki {
   padding-left: 20px;
-  background: url('../images/icon_link_wp.gif?1400724058') left center no-repeat;
+  background: url('../images/icon_link_wp.gif?1400805948') left center no-repeat;
 }
 .container .content a.wikilink1 {
   color: #3b8b00;
@@ -782,7 +782,7 @@ footer .main a {
   top: 0;
   height: 100%;
   overflow: auto;
-  background: #e9e9e9 url('../images/bg_mlist.jpg?1400724084') repeat-y;
+  background: #e9e9e9 url('../images/bg_mlist.jpg?1400805948') repeat-y;
 }
 .Mlist .box {
   height: 100%;
@@ -959,6 +959,9 @@ dl.search_results dd {
   line-height: 20px;
 }
 
+/*
+ * 拉哩啦雜原生樣示，只做少數修改就不特地整理了
+ */
 .container .content #dw__recent ul li, .container .content ul.tabs li, .container .content #media__tree ul li {
   background: none;
   padding-left: 0;
@@ -966,6 +969,7 @@ dl.search_results dd {
 
 .container .content #extension__manager ul li {
   display: inline;
+  background: none;
 }
 
 .container .content #acl__tree ul li {
@@ -1516,18 +1520,18 @@ ul.tabs li strong {
   background-color: #BFDBEC;
 }
 
-ul.admin_tasks {
+.container .content ul.admin_tasks {
   float: left;
   width: 40%;
   list-style-type: none;
   font-size: 1.125em;
 }
 
-[dir=rtl] ul.admin_tasks {
+[dir=rtl] .container .content ul.admin_tasks {
   float: right;
 }
 
-ul.admin_tasks li {
+.container .content ul.admin_tasks li {
   padding-left: 35px;
   margin: 0 0 1em 0;
   font-weight: bold;
@@ -1536,33 +1540,33 @@ ul.admin_tasks li {
   color: inherit;
 }
 
-[dir=rtl] ul.admin_tasks li {
+[dir=rtl] .container .content ul.admin_tasks li {
   padding-left: 0;
   padding-right: 35px;
   background-position: right 0;
 }
 
-ul.admin_tasks li.admin_acl {
+.container .content ul.admin_tasks li.admin_acl {
   background-image: url(/stm/lib/tpl/dokuwiki/../../images/admin/acl.png);
 }
 
-ul.admin_tasks li.admin_usermanager {
+.container .content ul.admin_tasks li.admin_usermanager {
   background-image: url(/stm/lib/tpl/dokuwiki/../../images/admin/usermanager.png);
 }
 
-ul.admin_tasks li.admin_plugin {
+.container .content ul.admin_tasks li.admin_plugin {
   background-image: url(/stm/lib/tpl/dokuwiki/../../images/admin/plugin.png);
 }
 
-ul.admin_tasks li.admin_config {
+.container .content ul.admin_tasks li.admin_config {
   background-image: url(/stm/lib/tpl/dokuwiki/../../images/admin/config.png);
 }
 
-ul.admin_tasks li.admin_revert {
+.container .content ul.admin_tasks li.admin_revert {
   background-image: url(/stm/lib/tpl/dokuwiki/../../images/admin/revert.png);
 }
 
-ul.admin_tasks li.admin_popularity {
+.container .content ul.admin_tasks li.admin_popularity {
   background-image: url(/stm/lib/tpl/dokuwiki/../../images/admin/popularity.png);
 }
 
@@ -2560,6 +2564,7 @@ div.wrap_spoiler {
   #extension__list .legend h2 {
     width: auto;
     float: none;
+    padding-top: 0;
   }
 
   #extension__list .legend div.linkbar {
@@ -2872,4 +2877,18 @@ span.wrap_box, span.wrap_danger, span.wrap_warning, span.wrap_caution, span.wrap
 
 .wrap_hi {
   border: 0;
+}
+
+/* 
+ * insitu-footnotes 
+ */
+div.insitu-footnote {
+  font-size: 0.9em;
+  border: 1px solid #BFDBEC;
+  background-color: #DEEFFA;
+  text-align: left;
+  padding: 4px;
+  width: auto;
+  max-width: 40%;
+  /* IE's width is handled in javascript */
 }

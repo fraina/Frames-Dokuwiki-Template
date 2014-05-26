@@ -10,10 +10,12 @@ jQuery(document).ready(function() {
      */
     
     jQuery('body').niceScroll({
-        cursorwidth: '5',
-        cursorcolor: '#666',
-        cursorborder: '#666'
+        zindex : 99999,
+        styler:"fb",
+        cursorcolor: '#2F7096',
+        cursorborder: '#2F7096'
     });
+
     
     /*
      * code 套用 MyCustomScrollbar
