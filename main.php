@@ -180,7 +180,6 @@ $showTOC = ($ACT == "show");
 					<li>
 						<a href="#" title="系統設定" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_setting.png'?>" alt="系統設定" />
-							<span>系統設定</span>
 							<?php
 								tpl_action('admin', 1, 'span');
 							?>

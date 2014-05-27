@@ -146,7 +146,7 @@ hr {
   margin-top: 20px;
 }
 
-input.button {
+input.button, .button.qq-upload-button, .button.qq-upload-cancel, .button.qq-upload-failed-text {
   padding: 7px;
 }
 
@@ -231,13 +231,14 @@ header .main .logo .slogan {
     float: left;
     font-size: 12px;
     margin-right: 20px;
-    margin-top: 3px;
+    margin-top: 4px;
     display: block;
   }
 }
 @media (min-width: 768px) {
   header .main .logo .slogan {
     font-size: 14px;
+    margin-top: 3px;
   }
 }
 header .main .options {
@@ -325,11 +326,9 @@ header .main .options .menu {
   }
   header .main .options .searchbox {
     position: relative;
-    overflow: hidden;
     float: right;
     width: 26px;
     height: 26px;
-    overflow: hidden;
     margin-left: 17px;
     margin-top: -4px;
     background-color: #fff;
@@ -345,7 +344,7 @@ header .main .options .menu {
     position: absolute;
     text-indent: -9999px;
   }
-  header .main .options .searchbox input {
+  header .main .options .searchbox input, header .main .options .searchbox .qq-upload-button, header .main .options .searchbox .qq-upload-cancel, header .main .options .searchbox .qq-upload-failed-text {
     position: absolute;
     width: 140px;
     right: 27px;
@@ -355,23 +354,23 @@ header .main .options .menu {
     /* firefox 19+ */
     /* ie */
   }
-  header .main .options .searchbox input::-webkit-input-placeholder {
+  header .main .options .searchbox input::-webkit-input-placeholder, header .main .options .searchbox .qq-upload-button::-webkit-input-placeholder, header .main .options .searchbox .qq-upload-cancel::-webkit-input-placeholder, header .main .options .searchbox .qq-upload-failed-text::-webkit-input-placeholder {
     font-style: italic;
     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
   }
-  header .main .options .searchbox input::-moz-placeholder {
+  header .main .options .searchbox input::-moz-placeholder, header .main .options .searchbox .qq-upload-button::-moz-placeholder, header .main .options .searchbox .qq-upload-cancel::-moz-placeholder, header .main .options .searchbox .qq-upload-failed-text::-moz-placeholder {
     font-style: italic;
     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
   }
-  header .main .options .searchbox input:-ms-input-placeholder {
+  header .main .options .searchbox input:-ms-input-placeholder, header .main .options .searchbox .qq-upload-button:-ms-input-placeholder, header .main .options .searchbox .qq-upload-cancel:-ms-input-placeholder, header .main .options .searchbox .qq-upload-failed-text:-ms-input-placeholder {
     font-style: italic;
     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
   }
-  header .main .options .searchbox input:-moz-placeholder {
+  header .main .options .searchbox input:-moz-placeholder, header .main .options .searchbox .qq-upload-button:-moz-placeholder, header .main .options .searchbox .qq-upload-cancel:-moz-placeholder, header .main .options .searchbox .qq-upload-failed-text:-moz-placeholder {
     font-style: italic;
     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
   }
-  header .main .options .searchbox input.button {
+  header .main .options .searchbox input.button, header .main .options .searchbox .button.qq-upload-button, header .main .options .searchbox .button.qq-upload-cancel, header .main .options .searchbox .button.qq-upload-failed-text {
     position: absolute;
     right: 0;
     top: 0;
@@ -427,7 +426,7 @@ header .Mmenu li.searchbar .searchbox {
   background: #00253b;
   position: relative;
 }
-header .Mmenu li.searchbar input {
+header .Mmenu li.searchbar input, header .Mmenu li.searchbar .qq-upload-button, header .Mmenu li.searchbar .qq-upload-cancel, header .Mmenu li.searchbar .qq-upload-failed-text {
   border: 0;
   width: 100%;
   color: white;
@@ -438,27 +437,27 @@ header .Mmenu li.searchbar input {
   /* firefox 19+ */
   /* ie */
 }
-header .Mmenu li.searchbar input::-webkit-input-placeholder {
+header .Mmenu li.searchbar input::-webkit-input-placeholder, header .Mmenu li.searchbar .qq-upload-button::-webkit-input-placeholder, header .Mmenu li.searchbar .qq-upload-cancel::-webkit-input-placeholder, header .Mmenu li.searchbar .qq-upload-failed-text::-webkit-input-placeholder {
   color: #2a739d;
   font-style: italic;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
 }
-header .Mmenu li.searchbar input::-moz-placeholder {
+header .Mmenu li.searchbar input::-moz-placeholder, header .Mmenu li.searchbar .qq-upload-button::-moz-placeholder, header .Mmenu li.searchbar .qq-upload-cancel::-moz-placeholder, header .Mmenu li.searchbar .qq-upload-failed-text::-moz-placeholder {
   color: #2a739d;
   font-style: italic;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
 }
-header .Mmenu li.searchbar input:-ms-input-placeholder {
+header .Mmenu li.searchbar input:-ms-input-placeholder, header .Mmenu li.searchbar .qq-upload-button:-ms-input-placeholder, header .Mmenu li.searchbar .qq-upload-cancel:-ms-input-placeholder, header .Mmenu li.searchbar .qq-upload-failed-text:-ms-input-placeholder {
   color: #2a739d;
   font-style: italic;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
 }
-header .Mmenu li.searchbar input:-moz-placeholder {
+header .Mmenu li.searchbar input:-moz-placeholder, header .Mmenu li.searchbar .qq-upload-button:-moz-placeholder, header .Mmenu li.searchbar .qq-upload-cancel:-moz-placeholder, header .Mmenu li.searchbar .qq-upload-failed-text:-moz-placeholder {
   color: #2a739d;
   font-style: italic;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
 }
-header .Mmenu li.searchbar input.button {
+header .Mmenu li.searchbar input.button, header .Mmenu li.searchbar .button.qq-upload-button, header .Mmenu li.searchbar .button.qq-upload-cancel, header .Mmenu li.searchbar .button.qq-upload-failed-text {
   position: absolute;
   right: 0;
   z-index: 999;
@@ -496,7 +495,7 @@ header .Mmenu li span {
 
 nav {
   z-index: 9998;
-  height: 30px;
+  min-height: 30px;
   width: 100%;
   background: #303030 url('../images/bg_breadcrumb.jpg?1400805948') left top repeat-x;
 }
@@ -505,7 +504,7 @@ nav .main {
   margin: 0 auto;
 }
 nav .breadcrumb {
-  height: 30px;
+  min-height: 30px;
   line-height: 30px;
   color: white;
   float: left;
@@ -515,7 +514,6 @@ nav .breadcrumb bdi {
 }
 nav .breadcrumb .bcsep {
   width: 20px;
-  display: block;
   text-indent: -9999px;
   background: url('../images/icon_breadcrumb.png?1400805948') center center no-repeat;
 }
@@ -655,8 +653,8 @@ nav aside #show_list .list ul ul li {
   margin-left: 15px;
 }
 .container .content ul li, .container .content ol li {
-  padding-left: 15px;
-  background: url('../images/icon_ul_style_type.png?1400805948') left 7px no-repeat;
+  padding-left: 13px;
+  background: url('../images/icon_ul_style_type.png?1400805948') left 8px no-repeat;
 }
 .container .content ol {
   list-style-type: decimal;
@@ -702,15 +700,18 @@ nav aside #show_list .list ul ul li {
 .container .content table tr:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
-.container .content table thead {
+.container .content table th, .container .content table thead {
   background-color: #0077ae;
   color: white;
 }
-.container .content table thead th {
+.container .content table th tr:hover, .container .content table thead tr:hover {
+  background-color: #0077ae;
+}
+.container .content table th {
   padding: 8px;
   border: 1px black solid;
 }
-.container .content table thead tr:hover {
+.container .content table th:hover {
   background-color: #0077ae;
 }
 .container .content table td {
@@ -818,7 +819,7 @@ footer .main a {
   margin-left: 15px;
   color: white;
   font-size: 14px;
-  margin: 30px 0 50px;
+  margin: 30px 0 50px 20px;
   text-align: center;
   width: 80px;
   background-color: #131313;
@@ -908,7 +909,7 @@ footer .main a {
   width: 70px;
   text-align: right;
 }
-#dw__register fieldset label.block input, #dw__profiledelete fieldset label.block input {
+#dw__register fieldset label.block input, #dw__register fieldset label.block .qq-upload-button, #dw__register fieldset label.block .qq-upload-cancel, #dw__register fieldset label.block .qq-upload-failed-text, #dw__profiledelete fieldset label.block input, #dw__profiledelete fieldset label.block .qq-upload-button, #dw__profiledelete fieldset label.block .qq-upload-cancel, #dw__profiledelete fieldset label.block .qq-upload-failed-text {
   width: 48.93617%;
   margin-left: 50px;
   padding: 4px;
@@ -925,7 +926,7 @@ footer .main a {
 #dw__editform .editButtons {
   padding-top: 10px;
 }
-#dw__editform .editButtons input {
+#dw__editform .editButtons input, #dw__editform .editButtons .qq-upload-button, #dw__editform .editButtons .qq-upload-cancel, #dw__editform .editButtons .qq-upload-failed-text {
   float: left;
   margin-right: 15px;
   height: 26px;
@@ -1012,6 +1013,13 @@ ul.tabs li strong {
   border-bottom-color: #eee;
 }
 
+.container .content ul.extensionList h2 {
+  padding-top: 0;
+}
+
+/*
+ * 媒體檔案管理
+ */
 #mediamanager__page h1 {
   margin-bottom: .5em;
 }
@@ -1387,11 +1395,11 @@ ul.tabs li strong {
   display: block;
 }
 
-#mediamanager__page form.meta input {
+#mediamanager__page form.meta input, #mediamanager__page form.meta .qq-upload-button, #mediamanager__page form.meta .qq-upload-cancel, #mediamanager__page form.meta .qq-upload-failed-text {
   width: 50%;
 }
 
-#mediamanager__page form.meta input.button {
+#mediamanager__page form.meta input.button, #mediamanager__page form.meta .button.qq-upload-button, #mediamanager__page form.meta .button.qq-upload-cancel, #mediamanager__page form.meta .button.qq-upload-failed-text {
   width: auto;
 }
 
@@ -1414,7 +1422,7 @@ ul.tabs li strong {
   padding-left: 18px;
 }
 
-#mediamanager__page #page__revisions ul li div.li input {
+#mediamanager__page #page__revisions ul li div.li input, #mediamanager__page #page__revisions ul li div.li .qq-upload-button, #mediamanager__page #page__revisions ul li div.li .qq-upload-cancel, #mediamanager__page #page__revisions ul li div.li .qq-upload-failed-text {
   position: relative;
   top: 1px;
 }
@@ -1462,6 +1470,71 @@ ul.tabs li strong {
   display: block;
 }
 
+/*
+ * 媒體檔案 (Popup)
+ */
+#media__manager {
+  height: 100%;
+  overflow: hidden;
+}
+
+#mediamgr__aside {
+  width: 30%;
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  left: 0;
+  border-right: 1px solid #ccc;
+}
+
+[dir=rtl] #mediamgr__aside {
+  left: auto;
+  right: 0;
+  border-right-width: 0;
+  border-left: 1px solid #ccc;
+}
+
+#mediamgr__aside .pad {
+  padding: .5em;
+}
+
+#mediamgr__content {
+  width: 69.7%;
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+}
+
+[dir=rtl] #mediamgr__content {
+  right: auto;
+  left: 0;
+}
+
+#mediamgr__content .pad {
+  padding: .5em;
+}
+
+#media__manager h1, #media__manager h2 {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+  padding-bottom: .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+#media__opts {
+  margin-bottom: .5em;
+}
+
+#media__opts input, #media__opts .qq-upload-button, #media__opts .qq-upload-cancel, #media__opts .qq-upload-failed-text {
+  margin-right: .3em;
+}
+
+[dir=rtl] #media__opts input, [dir=rtl] #media__opts .qq-upload-button, [dir=rtl] #media__opts .qq-upload-cancel, [dir=rtl] #media__opts .qq-upload-failed-text {
+  margin-right: 0;
+  margin-left: .3em;
+}
+
 #media__tree ul {
   padding-left: .2em;
 }
@@ -1506,28 +1579,79 @@ ul.tabs li strong {
   margin-right: 1.5em;
 }
 
+#media__content .odd, #media__content .even {
+  padding: .5em;
+}
+
+#media__content .odd {
+  background-color: #eee;
+}
+
+div.thumb a img {
+  margin-top: 10px;
+}
+
+#media__content input, #media__content .qq-upload-button, #media__content .qq-upload-cancel, #media__content .qq-upload-failed-text {
+  padding: 4px;
+  margin: 7px;
+  margin-left: 2px;
+  border: 1px solid #999999;
+  background-color: #ECECEC;
+}
+
+.qq-upload-button, .qq-upload-cancel, .qq-upload-failed-text {
+  width: 80px;
+}
+
+#media__content .qq-upload-button {
+  margin-top: 10px;
+  height: 20px;
+  line-height: 20px;
+}
+
+#media__opts {
+  line-height: 27px;
+}
+
+#media__tree .li {
+  line-height: 20px;
+}
+
+.container .content ul.thumbs li {
+  background: none;
+}
+
+/*
+ * 編輯頁面
+ */
 #tool__bar {
   margin-bottom: 8px;
 }
 
-#config__manager tr .input, #config__manager tr input, #config__manager tr textarea, #config__manager tr select, #config__manager tr.default .input, #config__manager tr.default input, #config__manager tr.default textarea, #config__manager tr.default select, #config__manager .selectiondefault {
+#config__manager tr .input, #config__manager tr input, #config__manager tr .qq-upload-button, #config__manager tr .qq-upload-cancel, #config__manager tr .qq-upload-failed-text, #config__manager tr textarea, #config__manager tr select, #config__manager tr.default .input, #config__manager tr.default input, #config__manager tr.default .qq-upload-button, #config__manager tr.default .qq-upload-cancel, #config__manager tr.default .qq-upload-failed-text, #config__manager tr.default textarea, #config__manager tr.default select, #config__manager .selectiondefault {
   background-color: inherit;
 }
 
-#config__manager td input.edit {
+#config__manager td input.edit, #config__manager td .edit.qq-upload-button, #config__manager td .edit.qq-upload-cancel, #config__manager td .edit.qq-upload-failed-text {
   border: 1px #A9A9A9 solid;
   padding: 4px;
   background-color: #BFDBEC;
 }
 
 .container .content ul.admin_tasks {
-  float: left;
-  width: 40%;
-  list-style-type: none;
-  font-size: 1.125em;
+  width: 100%;
+}
+@media (min-width: 420px) {
+  .container .content ul.admin_tasks {
+    float: left;
+    width: 40%;
+    list-style-type: none;
+    font-size: 1.125em;
+  }
 }
 
-[dir=rtl] .container .content ul.admin_tasks {
+[dir=rtl]
+.container .content ul.admin_tasks {
   float: right;
 }
 
@@ -1540,7 +1664,8 @@ ul.tabs li strong {
   color: inherit;
 }
 
-[dir=rtl] .container .content ul.admin_tasks li {
+[dir=rtl]
+.container .content ul.admin_tasks li {
   padding-left: 0;
   padding-right: 35px;
   background-position: right 0;
@@ -1577,7 +1702,8 @@ ul.tabs li strong {
   background-color: inherit;
 }
 
-[dir=rtl] #admin__version {
+[dir=rtl]
+#admin__version {
   clear: right;
   float: left;
 }
@@ -2127,7 +2253,7 @@ span.todouser {
   padding-right: 1.4em;
 }
 
-#user__manager input.button[disabled] {
+#user__manager input.button[disabled], #user__manager .button[disabled].qq-upload-button, #user__manager .button[disabled].qq-upload-cancel, #user__manager .button[disabled].qq-upload-failed-text {
   color: #ccc !important;
   border-color: #ccc !important;
 }
@@ -2188,7 +2314,7 @@ span.todouser {
   text-align: right;
 }
 
-[dir=rtl] #config__manager td.value input.checkbox {
+[dir=rtl] #config__manager td.value input.checkbox, [dir=rtl] #config__manager td.value .checkbox.qq-upload-button, [dir=rtl] #config__manager td.value .checkbox.qq-upload-cancel, [dir=rtl] #config__manager td.value .checkbox.qq-upload-failed-text {
   float: right;
   padding-left: 0;
   padding-right: .7em;
@@ -2244,7 +2370,7 @@ span.todouser {
   margin-right: 1em;
 }
 
-#config__manager td input.edit {
+#config__manager td input.edit, #config__manager td .edit.qq-upload-button, #config__manager td .edit.qq-upload-cancel, #config__manager td .edit.qq-upload-failed-text {
   width: 30em;
 }
 
@@ -2261,7 +2387,7 @@ span.todouser {
   height: 10em;
 }
 
-#config__manager tr .input, #config__manager tr input, #config__manager tr textarea, #config__manager tr select {
+#config__manager tr .input, #config__manager tr input, #config__manager tr .qq-upload-button, #config__manager tr .qq-upload-cancel, #config__manager tr .qq-upload-failed-text, #config__manager tr textarea, #config__manager tr select {
   background-color: inherit;
   color: #000;
 }
@@ -2891,4 +3017,42 @@ div.insitu-footnote {
   width: auto;
   max-width: 40%;
   /* IE's width is handled in javascript */
+}
+
+/*
+ * ajax - Search
+ */
+.JSpopup, #link__wiz {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  z-index: 99999;
+  overflow: hidden;
+  top: 26px;
+  width: 155px;
+  left: 10px;
+}
+
+#link__wiz .ui-dialog-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#qsearch__out {
+  border: 1px solid #BFDBEC;
+  background-color: #DEEFFA;
+  display: none;
+  padding-bottom: 3px;
+}
+#qsearch__out strong {
+  padding: 7px 0;
+  text-align: center;
+  display: block;
+  color: #A7A7A7;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
+}
+#qsearch__out li {
+  padding: 5px;
+  color: #2F7096;
+  font-size: 12px;
 }

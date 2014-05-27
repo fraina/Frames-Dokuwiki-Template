@@ -85,8 +85,9 @@ jQuery(document).ready(function() {
     
     jQuery('.forMobile.Mmenu .opt').each(function(){
         jQuery(this).find('span').css('display','none');
-        var getHref = jQuery(this).next('a').attr('href');
-        jQuery(this).attr('href',getHref);
+        var getHref = jQuery(this).next('a').attr('href'),
+            getText = jQuery(this).next('a').html();
+        jQuery(this).attr('href',getHref).attr('title',getText).find('img').attr('alt',getText).find('span').html(getText);
         
         if ( !(jQuery(this).next('a')).length > 0 ) {
             jQuery(this).find('img').addClass('opa');
@@ -109,7 +110,7 @@ jQuery(document).ready(function() {
     jQuery(document).bind("click",function(e){ 
         var target = jQuery(e.target); 
         if(target.closest(".searchbox.mobileElse").length == 0) {
-            jQuery('.searchbox.mobileElse #qsearch__in').stop().animate({opacity:0}, 200);
+            jQuery('.searchbox.mobileElse #qsearch__in').stop().animate({opacity:0}, 200).val('');
             jQuery(".searchbox.mobileElse").animate({width:'26px'}, 500);
             jQuery('.searchbox.mobileElse').find('.button').unbind('click');
             jQuery('.searchbox .click_area').show();

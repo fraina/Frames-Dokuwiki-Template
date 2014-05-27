@@ -21,6 +21,8 @@ if (!defined('DOKU_INC')) die();
     </title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <?php tpl_metaheaders()?>
+    <link rel="stylesheet" media="screen" href="<?php echo DOKU_TPL.'css/screen.css'?>">
+    
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
     <?php tpl_includeFile('meta.html') ?>
