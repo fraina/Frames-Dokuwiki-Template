@@ -36,12 +36,6 @@ $showTOC = ($ACT == "show");
 	</head>
 
 	<body>
-		<?php
-		    // render the content into buffer for later use
-		    ob_start();
-		    tpl_content(false);
-		    $buffer = ob_get_clean();
-		?>
 
 	    <?php /* with these Conditional Comments you can better address IE issues in CSS files,
          precede CSS rules by #IE7 for IE7 and #IE8 for IE8 (div closes at the bottom) */ ?>
@@ -223,11 +217,9 @@ $showTOC = ($ACT == "show");
 					<?php tpl_flush() /* flush the output buffer */ ?>
                 	<?php tpl_includeFile('pageheader.html') ?>
                     <!-- wikipage start -->
-					<?php tpl_content(false); ?>
+					<?php tpl_content(); ?>
                     <!-- wikipage stop -->
-                    <?php tpl_flush() ?>
                 	<?php tpl_includeFile('pagefooter.html') ?>
-                    <?php tpl_flush() ?>
 				</div>
 			</div>
 
