@@ -217,7 +217,7 @@ $showTOC = ($ACT == "show");
 					<?php tpl_flush() /* flush the output buffer */ ?>
                 	<?php tpl_includeFile('pageheader.html') ?>
                     <!-- wikipage start -->
-					<?php tpl_content(); ?>
+					<?php tpl_content(false); ?>
                     <!-- wikipage stop -->
                 	<?php tpl_includeFile('pagefooter.html') ?>
 				</div>
