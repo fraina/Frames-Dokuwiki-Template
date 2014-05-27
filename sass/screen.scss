@@ -444,13 +444,13 @@ nav {
   
   .main {
     @include center(10);
+    position: relative;
   }
   
   .breadcrumb {
     min-height: 30px;
     line-height: 30px;
     color: white;
-    float: left;
     
     bdi { padding: 0 7px;}
     
@@ -466,7 +466,9 @@ nav {
     
     @include at-breakpoint($pa) {
       width: columns(3);
-      float: right;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
     
     li {
