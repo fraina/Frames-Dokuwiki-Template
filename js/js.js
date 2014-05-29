@@ -169,21 +169,6 @@ jQuery(document).ready(function() {
        jQuery(this).find('.list').slideToggle(); 
     });
     
-    jQuery('a[href^="#"]').bind('click.smoothscroll',function (e) {
-        e.preventDefault();
-     
-        var  target = encodeURIComponent(this.hash),
-               temp = jQuery(this).html().replace(/ /g, "_").toLowerCase(),
-            $target = jQuery('#'+ temp);
-        
-        jQuery('html, body').stop().animate({
-            'scrollTop': $target.offset().top-20
-        }, 900, 'swing', function () {
-            window.location.hash = target;
-        });
-    });
-    
-    
     // 先取得 #cart 及其 top 值
     var $cart = nav,
         _top = $cart.offset().top;
@@ -219,6 +204,10 @@ jQuery(document).ready(function() {
             nav.animate({'right':'0'},500);
             mList.animate({'right':'-260px'},500);
             mMenu.slideUp();
+            jQuery('a[href^="#"]').click(function () {
+                var temp = jQuery(this).attr('href');
+                jQuery('html, body').stop().animate({'scrollTop': jQuery(temp).offset().top-20});
+            });
             jQuery(document).unbind('swipeleft').unbind('swiperight');
         }
     });
