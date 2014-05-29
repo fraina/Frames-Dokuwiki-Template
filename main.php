@@ -44,12 +44,12 @@ $showTOC = ($ACT == "show");
 	    <?php /* the "dokuwiki__top" id is needed somewhere at the top, because that's where the "back to top" button/link links to */ ?>
 	    <?php /* tpl_classes() provides useful CSS classes; if you choose not to use it, the 'dokuwiki' class at least
          should always be in one of the surrounding elements (e.g. plugins and templates depend on it) */ ?>
-		<div class="page dokuwiki">
+		<div class="page dokuwiki" id="top">
 
 			<div class="Mlist">
 				<div class="box">
 					<?php tpl_toc()?>
-					<a href="#" title="回到頂端" class="top">回到頂端</a>
+					<a href="#top" title="回到頂端" class="top">Top</a>
 				</div>
 			</div>
 
@@ -68,7 +68,7 @@ $showTOC = ($ACT == "show");
 					</div>
 					<div class="options">
 						<div class="forMobile">
-							<a href="#"><img src="<?php echo DOKU_TPL.'images/mobile_menu.png'?>" alt="Menu" /></a>
+							<a><img src="<?php echo DOKU_TPL.'images/mobile_menu.png'?>" alt="Menu" /></a>
 						</div>
 
 						<div class="searchbox mobileElse">
@@ -78,7 +78,7 @@ $showTOC = ($ACT == "show");
 
 						<ul class="menu">
 							<li>
-								<a href="#" id="Options_PC" title="<?php echo $lang['site_tools'] ?>"><?php echo $lang['site_tools'] ?></a>
+								<a id="Options_PC" title="<?php echo $lang['site_tools'] ?>"><?php echo $lang['site_tools'] ?></a>
 								<div class="optionsMenu">
 									<ul>
 				                        <?php
@@ -97,7 +97,7 @@ $showTOC = ($ACT == "show");
 								</div>
 							</li>
 							<li>
-								<a href="#" title="<?php echo $lang['user_tools']; ?>"><?php echo $lang['user_tools']; ?></a>
+								<a title="<?php echo $lang['user_tools']; ?>"><?php echo $lang['user_tools']; ?></a>
 								<div class="loginMenu">
 									<ul>
 			                            <?php /* the optional second parameter of tpl_action() switches between a link and a button,
@@ -127,7 +127,7 @@ $showTOC = ($ACT == "show");
 						</div>
 					</li>
 					<li>
-						<a href="#" title="編輯本頁" class="opt">
+						<a title="編輯本頁" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_edit.png'?>" alt="編輯本頁" />
 							<span>編輯本頁</span>
 							<?php
@@ -136,7 +136,7 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>
 					<li>
-						<a href="#" title="最近更新" class="opt">
+						<a title="最近更新" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_update.png'?>" alt="最近更新" />
 							<span>最近更新</span>
 							<?php
@@ -145,7 +145,7 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>
 					<li>
-						<a href="#" title="網站地圖" class="opt">
+						<a title="網站地圖" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_sitemap.png'?>" alt="網站地圖" />
 							<span>網站地圖</span>
 							<?php
@@ -154,7 +154,7 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>
 					<li>
-						<a href="#" title="登入 / 登出" class="opt">
+						<a title="登入 / 登出" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_logout.png'?>" alt=""登入 / 登出" />
 							<span>登入 / 登出</span>
 							<?php
@@ -163,7 +163,7 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>	
 					<li>
-						<a href="#" title="多媒體管理器" class="opt">
+						<a title="多媒體管理器" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_media.png'?>" alt="多媒體管理器" />
 							<span>多媒體管理器</span>
 							<?php
@@ -172,7 +172,7 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>
 					<li>
-						<a href="#" title="系統設定" class="opt">
+						<a title="系統設定" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_setting.png'?>" alt="系統設定" />
 							<?php
 								tpl_action('admin', 1, 'span');
@@ -195,7 +195,7 @@ $showTOC = ($ACT == "show");
 
 					<aside class="mobileElse">
 						<ul>
-							<li><a href="#" title="回到頁面頂端">回到頁面頂端</a></li>
+							<li><a href="#top" title="回到頁面頂端">Top</a></li>
 							<?php
 				                tpl_action('edit', 1, 'li');
 				            ?>

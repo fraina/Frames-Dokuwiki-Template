@@ -90,6 +90,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 strong {
@@ -564,7 +565,7 @@ nav {
 
 .container {
   background-color: #f5f5f5;
-  padding-top: 27px;
+  padding-top: 5px;
   overflow: hidden;
   font-size: 12px;
   
@@ -575,7 +576,7 @@ nav {
   
     h1, h2, h3, h4, h5 {
       color: #2f7096;
-      padding-top: 40px;
+      padding-top: 20px;
     }
     
     h1 { font-size: 28px; }
@@ -590,7 +591,7 @@ nav {
     }
     
     ul , ol {
-      margin-top: 7px;
+      margin: 7px 0;
       line-height: 22px;
       margin-left: 15px;
       
@@ -731,10 +732,13 @@ footer {
   background: #e9e9e9 image-url('bg_mlist.jpg') repeat-y;
   
   .box {
-    height: 100%;
     overflow-x: auto;
     display: block;
-    padding-top: 20px;
+    height: 100%;
+    
+    #dw__toc {
+      padding-top: 20px;
+    }
   }
   
   ul {
@@ -1048,6 +1052,10 @@ div.insitu-footnote {
  */
 
 .JSpopup,#link__wiz{position:absolute;background-color:#fff;color:#000;z-index:99999;overflow:hidden;top: 26px; width: 155px; left: 10px;}#link__wiz .ui-dialog-content{padding-left:0;padding-right:0;}
+
+#qsearch__in {
+  opacity: 0;
+}
 
 #qsearch__out {
   border: 1px solid #BFDBEC;
