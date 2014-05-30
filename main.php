@@ -1,10 +1,8 @@
 <?php
 /**
- * DokuWiki Starter Template
+ * Frames - DokuWiki Template
  *
- * @link     http://dokuwiki.org/template:starter
- * @author   Anika Henke <anika@selfthinker.org>
- * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
+ * @author   Fraina Huang <Fraina@distract.org> | Miles Chou <Miles@distract.org>
  */
 
 if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
@@ -21,29 +19,24 @@ $showTOC = ($ACT == "show");
 	    <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
 	    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     	<?php tpl_metaheaders() ?>
-	    
+
     	<link rel="stylesheet" media="screen" href="<?php echo DOKU_TPL.'css/screen.css'?>">
     	<link rel="stylesheet" media="screen" href="<?php echo DOKU_TPL.'css/jquery.mCustomScrollbar.css'?>">
-    	
+
     	<script src="<?php echo DOKU_TPL.'js/jquery.mobile.custom.js'?>"></script>
     	<script src="<?php echo DOKU_TPL.'js/jquery.nicescroll.min.js'?>"></script>
+    	<script src="<?php echo DOKU_TPL.'js/jquery.nicescroll.plus.js'?>"></script>
     	<script src="<?php echo DOKU_TPL.'js/jquery.mCustomScrollbar.concat.min.js'?>"></script>
 		<script src="<?php echo DOKU_TPL.'js/js.js'?>"></script>
-		
+
 	    <meta name="viewport" content="width=device-width,initial-scale=1" />
 	    <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
 	    <?php tpl_includeFile('meta.html') ?>
-	    
+
 	</head>
 
 	<body>
-		<?php
-		    // render the content into buffer for later use
-		    ob_start();
-		    tpl_content(false);
-		    $buffer = ob_get_clean();
-		?>
-		
+
 	    <?php /* with these Conditional Comments you can better address IE issues in CSS files,
          precede CSS rules by #IE7 for IE7 and #IE8 for IE8 (div closes at the bottom) */ ?>
 		<!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
@@ -51,13 +44,15 @@ $showTOC = ($ACT == "show");
 	    <?php /* the "dokuwiki__top" id is needed somewhere at the top, because that's where the "back to top" button/link links to */ ?>
 	    <?php /* tpl_classes() provides useful CSS classes; if you choose not to use it, the 'dokuwiki' class at least
          should always be in one of the surrounding elements (e.g. plugins and templates depend on it) */ ?>
-		<div class="page">
-			
+		<div class="page dokuwiki" id="top">
+
 			<div class="Mlist">
-				<?php tpl_toc()?>
-				<a href="#" title="回到頂端" class="top">回到頂端</a>
+				<div class="box">
+					<?php tpl_toc()?>
+					<a href="#top" title="回到頂端" class="top">Top</a>
+				</div>
 			</div>
-			
+
 			<header>
 				<div class="main">
 					<div class="logo">
@@ -73,17 +68,17 @@ $showTOC = ($ACT == "show");
 					</div>
 					<div class="options">
 						<div class="forMobile">
-							<a href="#"><img src="<?php echo DOKU_TPL.'images/mobile_menu.png'?>" alt="Menu" /></a>
+							<a><img src="<?php echo DOKU_TPL.'images/mobile_menu.png'?>" alt="Menu" /></a>
 						</div>
-						
+
 						<div class="searchbox mobileElse">
 							<div class="click_area">Open Searchbar</div>
 							<?php tpl_searchform() ?>
 						</div>
-						
+
 						<ul class="menu">
 							<li>
-								<a href="#" id="Options_PC" title="<?php echo $lang['site_tools'] ?>"><?php echo $lang['site_tools'] ?></a>
+								<a id="Options_PC" title="<?php echo $lang['site_tools'] ?>"><?php echo $lang['site_tools'] ?></a>
 								<div class="optionsMenu">
 									<ul>
 				                        <?php
@@ -102,7 +97,7 @@ $showTOC = ($ACT == "show");
 								</div>
 							</li>
 							<li>
-								<a href="#" title="<?php echo $lang['user_tools']; ?>"><?php echo $lang['user_tools']; ?></a>
+								<a title="<?php echo $lang['user_tools']; ?>"><?php echo $lang['user_tools']; ?></a>
 								<div class="loginMenu">
 									<ul>
 			                            <?php /* the optional second parameter of tpl_action() switches between a link and a button,
@@ -132,7 +127,7 @@ $showTOC = ($ACT == "show");
 						</div>
 					</li>
 					<li>
-						<a href="#" title="編輯本頁" class="opt">
+						<a title="編輯本頁" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_edit.png'?>" alt="編輯本頁" />
 							<span>編輯本頁</span>
 							<?php
@@ -141,7 +136,7 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>
 					<li>
-						<a href="#" title="最近更新" class="opt">
+						<a title="最近更新" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_update.png'?>" alt="最近更新" />
 							<span>最近更新</span>
 							<?php
@@ -150,7 +145,7 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>
 					<li>
-						<a href="#" title="網站地圖" class="opt">
+						<a title="網站地圖" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_sitemap.png'?>" alt="網站地圖" />
 							<span>網站地圖</span>
 							<?php
@@ -159,7 +154,7 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>
 					<li>
-						<a href="#" title="登入 / 登出" class="opt">
+						<a title="登入 / 登出" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_logout.png'?>" alt=""登入 / 登出" />
 							<span>登入 / 登出</span>
 							<?php
@@ -168,7 +163,7 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>	
 					<li>
-						<a href="#" title="多媒體管理器" class="opt">
+						<a title="多媒體管理器" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_media.png'?>" alt="多媒體管理器" />
 							<span>多媒體管理器</span>
 							<?php
@@ -177,9 +172,8 @@ $showTOC = ($ACT == "show");
 						</a>
 					</li>
 					<li>
-						<a href="#" title="系統設定" class="opt">
+						<a title="系統設定" class="opt">
 							<img src="<?php echo DOKU_TPL.'images/icon_setting.png'?>" alt="系統設定" />
-							<span>系統設定</span>
 							<?php
 								tpl_action('admin', 1, 'span');
 							?>
@@ -187,7 +181,7 @@ $showTOC = ($ACT == "show");
 					</li>
 				</ul>
 			</header>
-			
+
 			<nav style="position: relative;">
 				<div class="main">
 					<?php if($conf['breadcrumbs']){ ?>
@@ -198,19 +192,21 @@ $showTOC = ($ACT == "show");
 		                	<?php tpl_youarehere() ?>
 		                </div>
 		            <?php } ?>
-					
+
 					<aside class="mobileElse">
 						<ul>
-							<li><a href="#" title="回到頁面頂端">回到頁面頂端</a></li>
+							<li><a href="#top" title="回到頁面頂端">Top</a></li>
 							<?php
 				                tpl_action('edit', 1, 'li');
 				            ?>
-							<li id="show_list">
-								<a title="目錄">目錄</a>
-								<div class="list">
-									<?php tpl_toc()?>
-								</div>
-							</li>
+                            <?php if ($tocHtml = trim(tpl_toc(true))): ?>
+                                <li id="show_list">
+                                    <a title="目錄">目錄</a>
+                                    <div class="list">
+                                        <?php echo $tocHtml; ?>
+                                    </div>
+                                </li>                            
+                            <?php endif; ?>
 						</ul>
 					</aside>
 				</div>
@@ -223,19 +219,17 @@ $showTOC = ($ACT == "show");
                     <!-- wikipage start -->
 					<?php tpl_content(false); ?>
                     <!-- wikipage stop -->
-                    <?php tpl_flush() ?>
                 	<?php tpl_includeFile('pagefooter.html') ?>
-                    <?php tpl_flush() ?>
 				</div>
 			</div>
-			
+
 			<?php tpl_flush() ?>
 
 			<footer>
 				<div class="main">
 					<p><?php tpl_pageinfo() ?></p>
 					<?php tpl_license(''); // license text ?>
- 
+
 				    <div class="buttons">
 				        <?php
 				            tpl_license('button', true, false, false); // license button, no wrapper
@@ -254,11 +248,11 @@ $showTOC = ($ACT == "show");
 				    </div>
 				</div>
 			</footer>
-			
+
 		</div>
 		<div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
 		<div id="screen__mode" class="no"></div><?php /* helper to detect CSS media query in script.js */ ?>
     	<!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
-    	
+
 	</body>
 </html>
