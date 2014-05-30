@@ -91,6 +91,31 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  
+  &.urlextern , &.interwiki { 
+    color: #0077ae;
+    @include a-hover(#0077ae);
+  }
+  
+  &.urlextern {
+    padding-left: 20px;
+    background: image-url('icon_link_outside.png') left center no-repeat;
+  }
+  
+  &.interwiki {
+    padding-left: 20px;
+    background: image-url('icon_link_wp.gif') left center no-repeat;
+  }
+  
+  &.wikilink1 {
+    color: #3b8b00;
+    @include a-hover(#3b8b00);
+  }
+  
+  &.wikilink2 {
+    color: #ff731e;
+    border-bottom: 1px #ff731e dotted;
+  }
 }
 
 strong {
@@ -137,9 +162,10 @@ em {
 /* Style */
 
 .page {
-    @include container;
-    min-width: 320px;
-    background-color: #f5f5f5;
+  @include container;
+  min-width: 320px;
+  background-color: #f5f5f5;
+  position: relative;
 }
 
 
@@ -460,6 +486,8 @@ nav {
       text-indent: -9999px;
       background: image-url('icon_breadcrumb.png') center center no-repeat;
     }
+    
+    a.wikilink1 { color: white };
   }
   
   aside {
@@ -611,34 +639,6 @@ nav {
       }
     }
     
-    a {
-      
-      &.urlextern , &.interwiki { 
-        color: #0077ae;
-        @include a-hover(#0077ae);
-      }
-      
-      &.urlextern {
-        padding-left: 20px;
-        background: image-url('icon_link_outside.png') left center no-repeat;
-      }
-      
-      &.interwiki {
-        padding-left: 20px;
-        background: image-url('icon_link_wp.gif') left center no-repeat;
-      }
-      
-      &.wikilink1 {
-        color: #3b8b00;
-        @include a-hover(#3b8b00);
-      }
-      
-      &.wikilink2 {
-        color: #ff731e;
-        border-bottom: 1px #ff731e dotted;
-      }
-    }
-    
     table {
       margin: 10px 0;
       border-collapse: collapse;
@@ -725,7 +725,7 @@ footer {
 .Mlist {
   position: fixed;
   width: 260px;
-  right: -260px;
+  left: -260px;
   top: 0;
   height: 100%;
   overflow: auto;

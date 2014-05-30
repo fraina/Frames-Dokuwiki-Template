@@ -65,8 +65,8 @@ jQuery(document).ready(function() {
     jQuery(document).click(function(){
        options.find('div').slideUp();
        mMenu.slideUp();
-       page.animate({'margin-left':'0'},500);
-       mList.animate({'right':'-260px'},500);
+       page.animate({'right':'0'},500);
+       mList.animate({'left':'-260px'},500);
     });
     
     /*
@@ -104,7 +104,7 @@ jQuery(document).ready(function() {
    
     jQuery('.options .forMobile a').click(function(){
         jQuery('header .main').toggleClass('active');
-        mMenu.slideToggle();
+        mMenu.slideToggle('fast');
     });
     
     jQuery('.forMobile.Mmenu .opt').each(function(){
@@ -143,20 +143,18 @@ jQuery(document).ready(function() {
    
     jQuery('.Mmenu .searchbox').find('#qsearch__in').attr('placeholder','Search!');
     
-    
-    jQuery(document).bind('swipeleft', function(){
+    jQuery(document).bind('swiperight', function(){
         if (jQuery(window).width() < 768) {
-            page.animate({'margin-left':'-260px'},500);
-            mList.animate({'right':'0px'},500);
+            page.animate({'right':'-260px'},300);
+            mList.animate({'left':'0px'},300);
             mMenu.slideUp();
         }
     });
     
-    jQuery(document).bind('swiperight', function(){
+    jQuery(document).bind('swipeleft', function(){
         if (jQuery(window).width() < 768) {
-            page.animate({'margin-left':'0'},500);
-            nav.animate({'margin-left':'0'},500);
-            mList.animate({'right':'-260px'},500);
+            mList.animate({'left':'-260px'},0);
+            page.animate({'right':'0'},0);
             mMenu.slideUp();
         }
     });
@@ -200,9 +198,9 @@ jQuery(document).ready(function() {
                 position: 'relative'
             });
         } else {
-            page.animate({'margin-left':'0'},500);
-            nav.animate({'right':'0'},500);
-            mList.animate({'right':'-260px'},500);
+            page.animate({'right':'0'},500);
+            nav.animate({'left':'0'},500);
+            mList.animate({'left':'-260px'},500);
             mMenu.slideUp();
             jQuery('a[href^="#"]').click(function () {
                 var temp = jQuery(this).attr('href');

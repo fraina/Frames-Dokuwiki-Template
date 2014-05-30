@@ -110,6 +110,34 @@ a {
   color: inherit;
   cursor: pointer;
 }
+a.urlextern, a.interwiki {
+  color: #0077ae;
+  text-decoration: none;
+}
+a.urlextern:hover, a.interwiki:hover {
+  text-decoration: underline;
+  color: #0077ae;
+}
+a.urlextern {
+  padding-left: 20px;
+  background: url('../images/icon_link_outside.png?1400805948') left center no-repeat;
+}
+a.interwiki {
+  padding-left: 20px;
+  background: url('../images/icon_link_wp.gif?1400805948') left center no-repeat;
+}
+a.wikilink1 {
+  color: #3b8b00;
+  text-decoration: none;
+}
+a.wikilink1:hover {
+  text-decoration: underline;
+  color: #3b8b00;
+}
+a.wikilink2 {
+  color: #ff731e;
+  border-bottom: 1px #ff731e dotted;
+}
 
 strong {
   font-weight: bold;
@@ -167,6 +195,7 @@ em {
   margin-right: auto;
   min-width: 320px;
   background-color: #f5f5f5;
+  position: relative;
 }
 .page:after {
   content: "";
@@ -518,6 +547,9 @@ nav .breadcrumb .bcsep {
   text-indent: -9999px;
   background: url('../images/icon_breadcrumb.png?1400805948') center center no-repeat;
 }
+nav .breadcrumb a.wikilink1 {
+  color: white;
+}
 nav aside {
   width: 82.97872%;
   margin: 0 auto;
@@ -667,34 +699,6 @@ nav aside #show_list .list ul ul li {
   padding-left: 0;
   background: none;
 }
-.container .content a.urlextern, .container .content a.interwiki {
-  color: #0077ae;
-  text-decoration: none;
-}
-.container .content a.urlextern:hover, .container .content a.interwiki:hover {
-  text-decoration: underline;
-  color: #0077ae;
-}
-.container .content a.urlextern {
-  padding-left: 20px;
-  background: url('../images/icon_link_outside.png?1400805948') left center no-repeat;
-}
-.container .content a.interwiki {
-  padding-left: 20px;
-  background: url('../images/icon_link_wp.gif?1400805948') left center no-repeat;
-}
-.container .content a.wikilink1 {
-  color: #3b8b00;
-  text-decoration: none;
-}
-.container .content a.wikilink1:hover {
-  text-decoration: underline;
-  color: #3b8b00;
-}
-.container .content a.wikilink2 {
-  color: #ff731e;
-  border-bottom: 1px #ff731e dotted;
-}
 .container .content table {
   margin: 10px 0;
   border-collapse: collapse;
@@ -782,7 +786,7 @@ footer .main a {
 .Mlist {
   position: fixed;
   width: 260px;
-  right: -260px;
+  left: -260px;
   top: 0;
   height: 100%;
   overflow: auto;
