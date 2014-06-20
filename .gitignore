@@ -10,6 +10,9 @@
 # NetBeans project files
 /nbproject/
 
+# Sublime project files
+/*.sublime-project /*.sublime-workspace
+
 # Global/OSX.gitignore
 .DS_Store
 

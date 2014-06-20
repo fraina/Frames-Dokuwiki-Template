@@ -171,7 +171,7 @@ hr {
   height: 1px;
   border: none;
   background-color: #C8C8C8;
-  border-bottom: 2px white solid;
+  border-bottom: 1px white solid;
   margin-top: 20px;
 }
 
@@ -738,7 +738,7 @@ nav aside #show_list .list ul ul li {
   text-align: left;
   margin: 10px 0;
   line-height: 20px;
-  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Bitstream Vera Sans Mono', 'Nimbus Mono L', Monaco, 'Courier New', monospace;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Bitstream Vera Sans Mono", "Nimbus Mono L", Monaco, "Courier New", monospace;
 }
 .container .content code {
   border-radius: 10px;
@@ -752,7 +752,7 @@ nav aside #show_list .list ul ul li {
   padding: 2px 7px;
   line-height: 20px;
   font-size: 12px;
-  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Bitstream Vera Sans Mono', 'Nimbus Mono L', Monaco, 'Courier New', monospace;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Bitstream Vera Sans Mono", "Nimbus Mono L", Monaco, "Courier New", monospace;
 }
 .container .content blockquote {
   display: block;
@@ -931,6 +931,7 @@ footer .main a {
 #dw__editform #wiki__text {
   width: 100%;
   min-height: 300px;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Bitstream Vera Sans Mono", "Nimbus Mono L", Monaco, "Courier New", monospace;
 }
 #dw__editform .editButtons {
   padding-top: 10px;
@@ -3001,9 +3002,8 @@ span.wrap_box, span.wrap_danger, span.wrap_warning, span.wrap_caution, span.wrap
   display: none;
 }
 
-.container .content .wrap_info p, .container .content .wrap_tip p, .container .content .wrap_alert p, .container .content .wrap_download p, .container .content .wrap_todo p {
+.container .content .wrap_info p, .container .content .wrap_important p, .container .content .wrap_tip p, .container .content .wrap_alert p, .container .content .wrap_download p, .container .content .wrap_todo p {
   margin: 0 0 7px 0;
-  margin-left: 50px;
 }
 
 .container .content .wrap_box p {
@@ -3014,8 +3014,8 @@ span.wrap_box, span.wrap_danger, span.wrap_warning, span.wrap_caution, span.wrap
   border: 0;
 }
 
-/* 
- * insitu-footnotes 
+/*
+ * insitu-footnotes
  */
 div.insitu-footnote {
   font-size: 0.9em;
